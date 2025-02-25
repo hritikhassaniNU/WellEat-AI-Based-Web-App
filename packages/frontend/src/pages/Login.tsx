@@ -99,7 +99,7 @@ const LoginPage = () => {
     <LoginCard>
       <IllustrationSection>
         <img
-          src='\src\assets\images\medication-removebg-preview.png'
+          src='assets\images\medication-removebg-preview.png'
           alt='Meditation illustration'
           style={{ maxWidth: 400 }}
         />

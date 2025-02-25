@@ -163,7 +163,7 @@ const Signup = () => {
     <RegisterCard>
       <IllustrationSection>
         <img
-          src='\src\assets\images\t_prev_ui.png'
+          src='assets\images\t_prev_ui.png'
           alt='Meditation illustration'
           style={{ maxWidth: 400 }}
         />
