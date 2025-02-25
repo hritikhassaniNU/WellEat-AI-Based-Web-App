@@ -12,6 +12,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../Navbar/Navbar';
 import { Assessment, HealthAndSafety, Psychology } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
+import PhoneImage from '../../assets/images/about.png';
 import i18n from '../../i18n';
 
 // Styled Components
@@ -280,7 +281,8 @@ const About = () => {
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
                       <StyledImage
-                        src='public/assets/images/about.png'
+                        src={PhoneImage}
+                        // src='public/assets/images/about.png'
                         alt={t('about.subtitle')}
                         loading='lazy'
                       />
