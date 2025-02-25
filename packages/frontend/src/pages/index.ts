@@ -1,0 +1,11 @@
+export { default as HomePage } from './Home';
+export { default as LandingPage } from './LandingPage';
+export { default as LoginPage } from './Login';
+export { default as OnboardingPage } from './Onboarding';
+export { default as ProfilePage } from './Profile';
+export { default as SignupPage } from './Signup';
+export { default as MyListPage } from './MyList';
+export { default as NoMatch } from './Error';
+export { default as FAQs } from './FAQs';
+export { default as OurTeam } from './OurTeam';
+export { default as OurStory } from './OurStory';

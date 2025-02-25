@@ -1,0 +1,19 @@
+meta {
+  name: Get user-s medical profile
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/api/users/:userId/medical-profile
+  body: none
+  auth: none
+}
+
+params:path {
+  userId: 67414714e549f1bdbfeaac39
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

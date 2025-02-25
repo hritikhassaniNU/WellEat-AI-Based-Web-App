@@ -1,0 +1,23 @@
+meta {
+  name: Analyze a grocery item from an image
+  type: http
+  seq: 30
+}
+
+post {
+  url: {{baseUrl}}/api/users/:userId/grocery-items/analyze
+  body: multipartForm
+  auth: none
+}
+
+params:path {
+  userId: 
+}
+
+body:multipart-form {
+  image: 
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

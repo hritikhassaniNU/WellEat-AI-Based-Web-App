@@ -1,0 +1,309 @@
+{
+  "preloader": {
+    "loading": "正在加载...",
+    "loadingMessage": "请等待我们加载内容",
+    "authenticatedLoadingMessage": "请等待我们加载您的个性化内容"
+  },
+  "footer": {
+    "quickLinks": "快速链接",
+    "getStarted": "开始使用",
+    "contactInfo": "联系信息",
+    "ourTeam": "我们的团队",
+    "ourStory": "我们的故事",
+    "faq": "常见问题"
+  },
+  "navbar": {
+    "profile": "个人资料",
+    "home": "首页",
+    "myList": "我的清单",
+    "about": "关于",
+    "ourTeam": "我们的团队",
+    "ourStory": "我们的故事",
+    "logout": "退出",
+    "faq": "常见问题"
+  },
+  "signupScreen": {
+    "createAccount": "创建账户",
+    "login": "登录",
+    "enterDetails": "输入您的详细信息以开始",
+    "email": "电子邮箱",
+    "enterEmail": "输入您的电子邮箱",
+    "password": "输入您的密码",
+    "confirmPassword": "再次输入您的密码",
+    "allFieldsRequired": "所有字段都必须填写",
+    "charLengthValidation": "密码长度必须至少为6个字符",
+    "charLengthValidationMax": "密码长度不得超过20个字符",
+    "passErr": "密码必须包含至少一个大写字母、一个小写字母、一个数字和一个特殊字符",
+    "passIncorrect": "两次输入的密码不匹配",
+    "emailValid": "请输入有效的电子邮箱地址",
+    "easyPass": "密码太常见且容易被猜到",
+    "emailDomain": "不允许使用该电子邮箱域名",
+    "tnc": "注册即表示您同意我们的",
+    "tos": "服务条款",
+    "privPol": "隐私政策",
+    "and": "和",
+    "registering": "注册即表示您同意我们的"
+  },
+  "loginScreen": {
+    "signup": "注册",
+    "loginhere": "登录",
+    "nicetoSee": "很高兴再次见到你！",
+    "enterEP": "请输入您的电子邮箱和密码",
+    "email": "电子邮箱",
+    "password": "输入您的密码",
+    "remember": "记住我",
+    "forgot": "忘记密码？",
+    "enterEmail": "输入您的电子邮箱"
+  },
+  "homeScreen": {
+    "welcome": "欢迎",
+    "hotRecommendations": "热门推荐",
+    "myRecipes": "我的食谱",
+    "myGrocery": "我的杂货"
+  },
+  "profileScreen": {
+    "myProfile": "我的个人资料",
+    "personalInformation": "个人信息",
+    "myItems": "我的物品",
+    "myRecipes": "我的食谱",
+   "myList": "我的清单",
+    "delete": "删除账户",
+    "firstName": "名",
+    "lastName": "姓",
+    "email": "电子邮箱",
+    "invalidEmail": "Invalid email address",
+    "phone": "电话",
+    "dob": "出生日期（年-月-日）",
+    "height": "身高",
+    "country": "国家",
+    "state": "州/省",
+    "city": "城市",
+    "dietaryPref": "饮食偏好",
+    "allergies": "过敏",
+    "fitGoal": "健身目标",
+    "updProf": "更新个人资料",
+    "pescaterian": "鱼素食者",
+    "vegan": "纯素食者",
+    "veggie": "素食者",
+    "egg": "蛋素食者",
+    "flexi": "弹性素食者",
+    "macrob": "宏食主义者",
+    "peanuts": "花生",
+    "treeNuts": "坚果",
+    "dairy": "乳制品",
+    "shellfish": "贝类",
+    "glut": "麸质",
+    "soy": "大豆",
+    "weightLoss": "减肥",
+    "muscleGain": "增肌",
+    "flexib": "灵活性",
+    "bal": "平衡",
+    "overWell": "整体健康",
+    "format": "格式：YYYY-MM-DD",
+    "endurance": "耐力"
+  },
+
+  "hero": {
+      "subtitle": "AI驱动的营养指南",
+      "title": "让健康选择变得简单",
+      "description": "获取由人工智能驱动的个性化营养建议。扫描食品标签，追踪您的饮食，并为您的健康之旅做出明智的决定。",
+      "getStarted": "立即开始"
+    },
+
+    "scan": {
+      "healthScore": "健康评分：{{score}}/100",
+      "warnings": {
+        "additives": "{{count}}种添加剂",
+        "salt": "盐分过高",
+        "calories": "热量高"
+      },
+      "title": {
+        "main": "评估您的",
+        "highlight": "食品质量"
+      },
+      "description": "使用我们的AI驱动的食品扫描器来掌控您的营养。我们即时分析成分，提供关于添加剂、营养价值和健康影响的清晰见解。每次扫描都能帮助您为更健康的生活方式做出明智的选择。",
+      "altText": "乐事薯片产品图片"
+    },
+
+    "about": {
+      "subtitle": "关于我们",
+      "title": "助力您的健康之旅",
+      "description": "我们的使命是彻底改变您理解和选择食物的方式。通过先进的人工智能分析和个性化推荐，我们帮助您在营养和整体健康方面做出明智的决定。",
+      "learnMore": "了解更多"
+    },
+
+    "product": {
+      "title": "精选健康餐点",
+      "nutritionInfo": "营养信息",
+      "healthScore": "健康评分：{{score}}%",
+      "nutritionLabels": {
+        "calories": "卡路里",
+        "protein": "蛋白质",
+        "carbs": "碳水化合物",
+        "fats": "脂肪",
+        "fiber": "膳食纤维"
+      },
+      "meals": {
+        "superBowl": {
+          "title": "超级食物碗",
+          "description": "营养丰富的一碗，包含新鲜蔬菜、藜麦、牛油果和各种超级食物。是保持均衡健康饮食的完美选择。"
+        },
+        "mediterranean": {
+          "title": "地中海美食",
+          "description": "体验地中海风味，健康搭配蔬菜、橄榄油和全谷物。富含抗氧化剂和有益心脏健康的脂肪。"
+        },
+        "proteinBowl": {
+          "title": "蛋白能量碗",
+          "description": "完美的运动后餐点，含有瘦蛋白质、复合碳水化合物和肌肉恢复生长所需的基本营养物质。"
+        }
+      }
+    },
+
+    "info": {
+      "title": {
+        "main": "做出明智的",
+        "sub": "饮食选择"
+      },
+      "features": {
+        "aiAnalysis": {
+          "title": "AI食品分析",
+          "description": "获取由AI支持的即时食品分析，包含详细的营养信息。"
+        },
+        "smartRecommendations": {
+          "title": "智能推荐",
+          "description": "根据您的饮食偏好获取个性化的健康替代方案。"
+        },
+        "ingredientAnalysis": {
+          "title": "成分分析",
+          "description": "通过清晰的解释了解食材对健康的影响。"
+        },
+        "healthTracking": {
+          "title": "健康追踪",
+          "description": "监控您的饮食选择并追踪健康目标的进展。"
+        }
+      },
+      "altText": "应用界面"
+    },
+
+  "onboardingScreen": {
+    "welcome": {
+      "title": "欢迎使用 WellEat",
+      "subtitle": "您的健康饮食之旅从这里开始",
+      "joinCommunity": "加入我们的健康饮食爱好者社区",
+      "getStarted": "开始使用"
+    },
+    "features": {
+      "smartAnalysis": {
+        "title": "智能分析",
+        "description": "人工智能驱动的食材扫描和分析"
+      },
+      "personalizedDiet": {
+        "title": "个性化饮食",
+        "description": "基于您的偏好的定制建议"
+      },
+      "healthTracking": {
+        "title": "健康追踪",
+        "description": "监控您的营养目标和进展"
+      }
+    },
+    "steps": {
+      "welcome": "欢迎",
+      "personalInfo": "个人信息",
+      "location": "位置信息",
+      "diet": "饮食偏好",
+      "allergies": "过敏信息",
+      "fitness": "健身目标"
+    },
+    "personalInfo": {
+      "title": {
+        "main": "个人",
+        "highlight": "信息"
+      },
+      "firstName": "名字",
+      "lastName": "姓氏",
+      "phone": "电话号码",
+      "enterPhone": "请输入您的电话号码",
+      "dateOfBirth": "出生日期",
+      "selectDate": "选择日期",
+      "height": "身高",
+      "enterHeight": "请输入您的身高"
+    },
+    "location": {
+      "title": {
+        "main": "您的",
+        "highlight": "位置"
+      },
+      "country": "国家",
+      "enterCountry": "请输入国家",
+      "state": "省份/州",
+      "enterState": "请输入省份/州",
+      "city": "城市",
+      "enterCity": "请输入城市",
+      "zipCode": "邮政编码",
+      "enterZipCode": "请输入邮政编码"
+    },
+    "dietary": {
+      "title": "饮食偏好",
+      "selectPreferences": "选择您的饮食偏好",
+      "options": {
+        "vegan": "纯素",
+        "vegetarian": "素食",
+        "eggetarian": "蛋素",
+        "pescaterian": "鱼素",
+        "flexitarian": "灵活素食",
+        "macrobiotic": "自然饮食"
+      }
+    },
+    "allergies": {
+      "title": "过敏信息",
+      "question": "您是否有任何食物过敏？",
+      "options": {
+        "peanuts": "花生",
+        "treeNuts": "坚果",
+        "eggs": "鸡蛋",
+        "dairy": "乳制品",
+        "shellfish": "贝类",
+        "gluten": "麸质",
+        "soy": "大豆"
+      }
+    },
+    "fitness": {
+      "title": "健身目标",
+      "selectGoal": "选择您的健身目标",
+      "options": {
+        "weightLoss": "减重",
+        "muscleGain": "增肌",
+        "endurance": "耐力",
+        "flexibility": "灵活性",
+        "balance": "平衡",
+        "wellness": "整体健康"
+      }
+    },
+    "validation": {
+      "required": "此字段为必填项",
+      "firstNameRequired": "请输入名字",
+      "lastNameRequired": "请输入姓氏",
+      "phoneRequired": "请输入电话号码",
+      "phoneInvalid": "请输入有效的电话号码",
+      "dateRequired": "请选择出生日期",
+      "heightRequired": "请输入身高",
+      "countryRequired": "请选择国家",
+      "stateRequired": "请选择省份/州",
+      "cityRequired": "请选择城市",
+      "zipRequired": "请输入邮政编码",
+      "zipInvalid": "请输入有效的邮政编码",
+      "selectAtLeastOne": "请至少选择一个选项"
+    },
+    "navigation": {
+      "back": "返回",
+      "next": "下一步",
+      "complete": "完成设置",
+      "skip": "跳过"
+    },
+    "completion": {
+      "success": "设置完成！",
+      "redirect": "正在为您跳转到主页面..."
+    }
+  }
+  
+}

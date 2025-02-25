@@ -1,0 +1,562 @@
+openapi: 3.0.3
+info:
+  title: Well Eat API Design
+  version: 1.0.0
+servers:
+  - url: https://api.welleat.com/v1
+paths:
+  /users:
+    get:
+      summary: Get a list of all users
+      responses:
+        '200':
+          description: A list of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+    post:
+      summary: Create a new user
+      requestBody:
+        description: User object to create
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /users/{userId}:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a user by ID
+      responses:
+        '200':
+          description: User details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+    put:
+      summary: Update a user by ID
+      requestBody:
+        description: User object to update
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: User updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+    delete:
+      summary: Delete a user by ID
+      responses:
+        '204':
+          description: User deleted successfully
+  /users/{userId}/medical-profile:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get user's medical profile
+      responses:
+        '200':
+          description: Medical profile details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MedicalProfile'
+    put:
+      summary: Update user's medical profile
+      requestBody:
+        description: Medical profile object to update
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MedicalProfile'
+      responses:
+        '200':
+          description: Medical profile updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MedicalProfile'
+  /users/{userId}/dietary-preferences:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get user's dietary preferences
+      responses:
+        '200':
+          description: List of dietary preferences
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DietaryPreference'
+    post:
+      summary: Add a dietary preference
+      requestBody:
+        description: Dietary preference object to add
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DietaryPreference'
+      responses:
+        '201':
+          description: Dietary preference added successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DietaryPreference'
+  /users/{userId}/dietary-preferences/{preferenceId}:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: preferenceId
+        in: path
+        required: true
+        schema:
+          type: string
+    delete:
+      summary: Delete a dietary preference
+      responses:
+        '204':
+          description: Dietary preference deleted successfully
+  /users/{userId}/user-lists:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get user's lists
+      responses:
+        '200':
+          description: List of user lists
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserList'
+    post:
+      summary: Create a new user list
+      requestBody:
+        description: User list object to create
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserList'
+      responses:
+        '201':
+          description: User list created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserList'
+  /users/{userId}/user-lists/{listId}:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: listId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a specific user list
+      responses:
+        '200':
+          description: User list details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserList'
+    delete:
+      summary: Delete a user list
+      responses:
+        '204':
+          description: User list deleted successfully
+  /users/{userId}/user-lists/{listId}/grocery-items:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: listId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get grocery items in a user list
+      responses:
+        '200':
+          description: List of grocery items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroceryItem'
+    post:
+      summary: Add a grocery item to a user list
+      requestBody:
+        description: Grocery item object to add
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GroceryItem'
+      responses:
+        '201':
+          description: Grocery item added successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroceryItem'
+  /users/{userId}/recommendations:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get user's recommendations
+      responses:
+        '200':
+          description: List of recommendations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recommendation'
+    post:
+      summary: Create a new recommendation
+      requestBody:
+        description: Recommendation object to create
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recommendation'
+      responses:
+        '201':
+          description: Recommendation created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recommendation'
+  /users/{userId}/recommendations/{recommendationId}:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: recommendationId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a recommendation by ID
+      responses:
+        '200':
+          description: Recommendation details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recommendation'
+    delete:
+      summary: Delete a recommendation
+      responses:
+        '204':
+          description: Recommendation deleted successfully
+  /grocery-items:
+    get:
+      summary: Get all grocery items
+      responses:
+        '200':
+          description: List of grocery items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroceryItem'
+  /grocery-items/{itemId}:
+    parameters:
+      - name: itemId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a grocery item by ID
+      responses:
+        '200':
+          description: Grocery item details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroceryItem'
+    delete:
+      summary: Delete a grocery item
+      responses:
+        '204':
+          description: Grocery item deleted successfully
+  /recipes:
+    get:
+      summary: Get all recipes
+      responses:
+        '200':
+          description: List of recipes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+    post:
+      summary: Create a new recipe
+      requestBody:
+        description: Recipe object to create
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recipe'
+      responses:
+        '201':
+          description: Recipe created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+  /recipes/{recipeId}:
+    parameters:
+      - name: recipeId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a recipe by ID
+      responses:
+        '200':
+          description: Recipe details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+    put:
+      summary: Update a recipe by ID
+      requestBody:
+        description: Recipe object to update
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recipe'
+      responses:
+        '200':
+          description: Recipe updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+    delete:
+      summary: Delete a recipe
+      responses:
+        '204':
+          description: Recipe deleted successfully
+  /users/{userId}/grocery-items/analyze:
+    post:
+      summary: Analyze a grocery item from an image
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Image file of the grocery item's nutritional ingredients
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: string
+                  format: binary
+      responses:
+        '201':
+          description: Grocery item analyzed and added to user's list
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroceryItem'
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        UserID:
+          type: string
+        LastName:
+          type: string
+        FirstName:
+          type: string
+        Picture:
+          type: string
+          format: uri
+        DateOfBirth:
+          type: string
+          format: date
+        CurrentCity:
+          type: string
+        Country:
+          type: string
+        State:
+          type: string
+        FitnessGoal:
+          type: object
+          properties:
+            GoalType:
+              type: string
+            TargetDate:
+              type: string
+              format: date
+        MedicalProfile:
+          $ref: '#/components/schemas/MedicalProfile'
+        DietaryPreferences:
+          type: array
+          items:
+            $ref: '#/components/schemas/DietaryPreference'
+        UserLists:
+          type: array
+          items:
+            $ref: '#/components/schemas/UserList'
+        Recommendations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Recommendation'
+    MedicalProfile:
+      type: object
+      properties:
+        Allergies:
+          type: array
+          items:
+            type: string
+        PreviousAilments:
+          type: array
+          items:
+            type: string
+    DietaryPreference:
+      type: object
+      properties:
+        FoodPreferences:
+          type: array
+          items:
+            type: string
+    UserList:
+      type: object
+      properties:
+        ListID:
+          type: string
+        GroceryItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/GroceryItem'
+        CreatedDate:
+          type: string
+          format: date-time
+    GroceryItem:
+      type: object
+      properties:
+        ItemID:
+          type: string
+        Name:
+          type: string
+        Brand:
+          type: string
+        Category:
+          type: string
+        NutritionalScore:
+          type: number
+        Ingredients:
+          type: array
+          items:
+            type: string
+        Pros:
+          type: array
+          items:
+            type: string
+        Cons:
+          type: array
+          items:
+            type: string
+    Recommendation:
+      type: object
+      properties:
+        RecommendationID:
+          type: string
+        Type:
+          type: string
+        Recipe:
+          $ref: '#/components/schemas/Recipe'
+        GroceryItem:
+          $ref: '#/components/schemas/GroceryItem'
+    Recipe:
+      type: object
+      properties:
+        RecipeID:
+          type: string
+        Name:
+          type: string
+        Instructions:
+          type: string
+        DifficultyLevel:
+          type: string

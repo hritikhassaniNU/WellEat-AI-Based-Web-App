@@ -1,0 +1,19 @@
+{
+  "name": "final-project-honoredones",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "repository": "https://github.com/info-6150-fall-2024/final-project-honoredones.git",
+  "author": "Prayas Lashkari <lashkari.p@northeastern.edu>",
+  "scripts": {
+    "dev": "concurrently \"cd packages/frontend && yarn run dev\" \"cd packages/backend && yarn run dev\"",
+    "storybook": "cd packages/frontend && yarn run storybook"
+  },
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

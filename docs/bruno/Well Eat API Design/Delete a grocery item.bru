@@ -1,0 +1,19 @@
+meta {
+  name: Delete a grocery item
+  type: http
+  seq: 24
+}
+
+delete {
+  url: {{baseUrl}}/api/grocery-items/:itemId
+  body: none
+  auth: none
+}
+
+params:path {
+  itemId: 
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

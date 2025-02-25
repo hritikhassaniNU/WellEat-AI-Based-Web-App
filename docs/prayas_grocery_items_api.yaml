@@ -1,0 +1,322 @@
+openapi: 3.0.3
+info:
+  title: Well Eat API - Grocery Items and Analysis
+  version: 1.0.0
+servers:
+  - url: https://api.welleat.com/v1
+paths:
+  /grocery-items:
+    get:
+      summary: Get all grocery items
+      responses:
+        '200':
+          description: List of grocery items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroceryItem'
+              examples:
+                example:
+                  summary: A list of grocery items
+                  value:
+                    - ItemID: "123"
+                      Name: "Organic Apple"
+                      Brand: "Fresh Farms"
+                      Category: "Fruits"
+                      NutritionalScore: 9.5
+                      Ingredients:
+                        - "Apple"
+                      Pros:
+                        - "Rich in fiber"
+                        - "No added sugar"
+                      Cons: []
+                    - ItemID: "456"
+                      Name: "Whole Wheat Bread"
+                      Brand: "Bakery Co."
+                      Category: "Bakery"
+                      NutritionalScore: 8.2
+                      Ingredients:
+                        - "Whole wheat flour"
+                        - "Water"
+                        - "Yeast"
+                        - "Salt"
+                      Pros:
+                        - "High in whole grains"
+                      Cons:
+                        - "Contains gluten"
+  /grocery-items/{itemId}:
+    parameters:
+      - name: itemId
+        in: path
+        required: true
+        schema:
+          type: string
+        example: "123"
+    get:
+      summary: Get a grocery item by ID
+      responses:
+        '200':
+          description: Grocery item details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroceryItem'
+              examples:
+                example:
+                  summary: A grocery item
+                  value:
+                    ItemID: "123"
+                    Name: "Organic Apple"
+                    Brand: "Fresh Farms"
+                    Category: "Fruits"
+                    NutritionalScore: 9.5
+                    Ingredients:
+                      - "Apple"
+                    Pros:
+                      - "Rich in fiber"
+                      - "No added sugar"
+                    Cons: []
+    delete:
+      summary: Delete a grocery item
+      responses:
+        '204':
+          description: Grocery item deleted successfully
+  /users/{userId}/grocery-items/analyze:
+    post:
+      summary: Analyze a grocery item from an image
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+          example: "user123"
+      requestBody:
+        description: Image file of the grocery item's nutritional ingredients
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: string
+                  format: binary
+            encoding:
+              image:
+                contentType: image/png, image/jpeg
+            examples:
+              example:
+                summary: An image of a grocery item's nutritional label
+                value:
+                  image: (binary image data)
+      responses:
+        '201':
+          description: Grocery item analyzed and added to user's list
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroceryItem'
+              examples:
+                example:
+                  summary: Analyzed grocery item
+                  value:
+                    ItemID: "789"
+                    Name: "Almond Milk"
+                    Brand: "NutriGood"
+                    Category: "Beverages"
+                    NutritionalScore: 8.8
+                    Ingredients:
+                      - "Water"
+                      - "Almonds"
+                      - "Calcium Carbonate"
+                    Pros:
+                      - "Lactose-free"
+                      - "Low in calories"
+                    Cons:
+                      - "May contain added sugars"
+  /users/{userId}/user-lists/{listId}/grocery-items:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+        example: "user123"
+      - name: listId
+        in: path
+        required: true
+        schema:
+          type: string
+        example: "list456"
+    get:
+      summary: Get grocery items in a user list
+      responses:
+        '200':
+          description: List of grocery items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroceryItem'
+              examples:
+                example:
+                  summary: User's grocery list
+                  value:
+                    - ItemID: "123"
+                      Name: "Organic Apple"
+                      Brand: "Fresh Farms"
+                      Category: "Fruits"
+                      NutritionalScore: 9.5
+                      Ingredients:
+                        - "Apple"
+                      Pros:
+                        - "Rich in fiber"
+                        - "No added sugar"
+                      Cons: []
+                    - ItemID: "456"
+                      Name: "Whole Wheat Bread"
+                      Brand: "Bakery Co."
+                      Category: "Bakery"
+                      NutritionalScore: 8.2
+                      Ingredients:
+                        - "Whole wheat flour"
+                        - "Water"
+                        - "Yeast"
+                        - "Salt"
+                      Pros:
+                        - "High in whole grains"
+                      Cons:
+                        - "Contains gluten"
+    post:
+      summary: Add a grocery item to a user list
+      requestBody:
+        description: Grocery item object to add
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GroceryItem'
+            examples:
+              example:
+                summary: Grocery item to add
+                value:
+                  ItemID: "789"
+                  Name: "Almond Milk"
+                  Brand: "NutriGood"
+                  Category: "Beverages"
+                  NutritionalScore: 8.8
+                  Ingredients:
+                    - "Water"
+                    - "Almonds"
+                    - "Calcium Carbonate"
+                  Pros:
+                    - "Lactose-free"
+                    - "Low in calories"
+                  Cons:
+                    - "May contain added sugars"
+      responses:
+        '201':
+          description: Grocery item added successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroceryItem'
+              examples:
+                example:
+                  summary: Added grocery item
+                  value:
+                    ItemID: "789"
+                    Name: "Almond Milk"
+                    Brand: "NutriGood"
+                    Category: "Beverages"
+                    NutritionalScore: 8.8
+                    Ingredients:
+                      - "Water"
+                      - "Almonds"
+                      - "Calcium Carbonate"
+                    Pros:
+                      - "Lactose-free"
+                      - "Low in calories"
+                    Cons:
+                      - "May contain added sugars"
+  /recipes:
+    get:
+      summary: Get all recipes
+      responses:
+        '200':
+          description: List of recipes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recipe'
+              examples:
+                example:
+                  summary: List of recipes
+                  value:
+                    - RecipeID: "recipe001"
+                      Name: "Grilled Chicken Salad"
+                      Instructions: "1. Marinate chicken...\n2. Grill chicken...\n3. Mix with salad..."
+                      DifficultyLevel: "Easy"
+                    - RecipeID: "recipe002"
+                      Name: "Vegan Lentil Soup"
+                      Instructions: "1. Sauté onions...\n2. Add lentils...\n3. Simmer until cooked..."
+                      DifficultyLevel: "Medium"
+components:
+  schemas:
+    GroceryItem:
+      type: object
+      properties:
+        ItemID:
+          type: string
+          example: "123"
+        Name:
+          type: string
+          example: "Organic Apple"
+        Brand:
+          type: string
+          example: "Fresh Farms"
+        Category:
+          type: string
+          example: "Fruits"
+        NutritionalScore:
+          type: number
+          example: 9.5
+        Ingredients:
+          type: array
+          items:
+            type: string
+          example:
+            - "Apple"
+        Pros:
+          type: array
+          items:
+            type: string
+          example:
+            - "Rich in fiber"
+            - "No added sugar"
+        Cons:
+          type: array
+          items:
+            type: string
+          example: []
+    Recipe:
+      type: object
+      properties:
+        RecipeID:
+          type: string
+          example: "recipe001"
+        Name:
+          type: string
+          example: "Grilled Chicken Salad"
+        Instructions:
+          type: string
+          example: "1. Marinate chicken...\n2. Grill chicken...\n3. Mix with salad..."
+        DifficultyLevel:
+          type: string
+          example: "Easy"

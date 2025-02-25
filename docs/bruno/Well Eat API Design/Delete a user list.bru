@@ -1,0 +1,20 @@
+meta {
+  name: Delete a user list
+  type: http
+  seq: 15
+}
+
+delete {
+  url: {{baseUrl}}/api/users/:userId/user-lists/:listId
+  body: none
+  auth: none
+}
+
+params:path {
+  userId: 67414714e549f1bdbfeaac39
+  listId: 67414714e549f1bdbfeaac39
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

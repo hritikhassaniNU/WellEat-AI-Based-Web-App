@@ -1,0 +1,79 @@
+meta {
+  name: Create a new user
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/auth/register
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "john.doe@example.com",
+    "password": "SecurePassword123!",
+    "firstName": "John",
+    "lastName": "Doe",
+    "picture": "https://example.com/images/john-doe.jpg",
+    "dateOfBirth": "1990-01-01T00:00:00.000Z",
+    "currentCity": "New York",
+    "state": "NY",
+    "country": "USA",
+    "fitnessGoal": {
+      "goalType": "Build Muscle",
+      "targetDate": "2024-06-30T00:00:00.000Z"
+    },
+    "medicalProfile": {
+      "allergies": ["Peanuts", "Gluten"],
+      "previousAilments": ["Asthma", "Hypertension"]
+    },
+    "dietaryPreferences": [
+      {
+        "foodPreferences": ["High Protein", "Low Carb"]
+      }
+    ],
+    "userLists": [
+      {
+        "groceryItems": [
+          {
+            "itemName": "Chicken Breast",
+            "quantity": 5,
+            "unit": "lbs"
+          },
+          {
+            "itemName": "Broccoli",
+            "quantity": 3,
+            "unit": "bunches"
+          }
+        ],
+        "createdDate": "2023-11-22T12:00:00.000Z"
+      }
+    ],
+    "recommendations": [
+      {
+        "type": "Recipe",
+        "recipe": {
+          "name": "Grilled Chicken Salad",
+          "instructions": "Grill chicken and mix with fresh vegetables.",
+          "difficultyLevel": "Medium"
+        },
+        "groceryItem": null
+      },
+      {
+        "type": "GroceryItem",
+        "recipe": null,
+        "groceryItem": {
+          "itemName": "Quinoa",
+          "quantity": 2,
+          "unit": "lbs"
+        }
+      }
+    ]
+  }
+}

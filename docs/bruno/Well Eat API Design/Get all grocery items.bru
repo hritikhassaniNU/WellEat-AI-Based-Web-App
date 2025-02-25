@@ -1,0 +1,15 @@
+meta {
+  name: Get all grocery items
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{baseUrl}}/api/grocery-items
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

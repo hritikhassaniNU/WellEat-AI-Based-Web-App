@@ -1,0 +1,37 @@
+meta {
+  name: Add a grocery item to a user list
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{baseUrl}}/api/users/:userId/user-lists/:listId/grocery-items
+  body: json
+  auth: none
+}
+
+params:path {
+  userId: 67414714e549f1bdbfeaac39
+  listId: 67414bbf5fa64b3e2d8cb2f5
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+      "ingredients": [
+        "New A",
+        "New B",
+        "New C"
+      ],
+      "pros": [
+        "New A is great",
+        "New B is great"
+      ],
+      "cons": [
+        "New C is bad"
+      ]
+  }
+}

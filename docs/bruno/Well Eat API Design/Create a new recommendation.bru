@@ -1,0 +1,19 @@
+meta {
+  name: Create a new recommendation
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{baseUrl}}/api/recommendations/:userId/recommendations
+  body: json
+  auth: none
+}
+
+params:path {
+  userId: 
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

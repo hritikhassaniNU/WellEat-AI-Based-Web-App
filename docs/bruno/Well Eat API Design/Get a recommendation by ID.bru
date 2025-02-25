@@ -1,0 +1,20 @@
+meta {
+  name: Get a recommendation by ID
+  type: http
+  seq: 20
+}
+
+get {
+  url: {{baseUrl}}/api/recommendations/:userId/recommendations/:recommendationId
+  body: none
+  auth: none
+}
+
+params:path {
+  userId: 67414714e549f1bdbfeaac39
+  recommendationId: 67414714e549f1bdbfeaac40
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

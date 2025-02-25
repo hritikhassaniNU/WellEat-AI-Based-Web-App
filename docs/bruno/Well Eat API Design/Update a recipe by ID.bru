@@ -1,0 +1,19 @@
+meta {
+  name: Update a recipe by ID
+  type: http
+  seq: 28
+}
+
+put {
+  url: {{baseUrl}}/api/recipes/:recipeId
+  body: json
+  auth: none
+}
+
+params:path {
+  recipeId: 
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

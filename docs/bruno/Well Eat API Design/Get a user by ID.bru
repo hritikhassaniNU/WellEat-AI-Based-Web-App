@@ -1,0 +1,23 @@
+meta {
+  name: Get a user by ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/users/:userId
+  body: none
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+params:path {
+  userId: 6744df575bb213430c5b2bf4
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

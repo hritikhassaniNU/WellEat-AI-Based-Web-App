@@ -1,0 +1,20 @@
+meta {
+  name: Delete a dietary preference
+  type: http
+  seq: 11
+}
+
+delete {
+  url: {{baseUrl}}/api/users/:userId/dietary-preferences/:preferenceId
+  body: none
+  auth: none
+}
+
+params:path {
+  userId: 67414714e549f1bdbfeaac39
+  preferenceId: 67414a905fa64b3e2d8cb2d7
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

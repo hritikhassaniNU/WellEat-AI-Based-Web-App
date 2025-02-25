@@ -1,0 +1,15 @@
+meta {
+  name: Get all recipes
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{baseUrl}}/api/recipes
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

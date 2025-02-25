@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",          // Set the base path to the monorepo root
+      "paths": {
+        "backend": ["packages/backend"],   // Map 'backend' to the backend source directory
+        "frontend": ["packages/frontend"], // Map 'frontend' to the frontend source directory
+      }
+    },
+    "include": ["packages/**/*"]  // Ensure all packages are included
+  }

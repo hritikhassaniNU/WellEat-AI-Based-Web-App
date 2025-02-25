@@ -1,0 +1,19 @@
+meta {
+  name: Delete a user by ID
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/api/users/:userId
+  body: none
+  auth: none
+}
+
+params:path {
+  userId: 674141a40815157c43f5570b
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

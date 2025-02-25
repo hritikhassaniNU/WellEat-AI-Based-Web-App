@@ -1,0 +1,26 @@
+meta {
+  name: Update a user by ID
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/api/users/:userId
+  body: json
+  auth: none
+}
+
+params:path {
+  userId: 674141a40815157c43f5570b
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "firstName": "Updated First Name",
+    "lastName": "Update Last Name"
+  }
+}

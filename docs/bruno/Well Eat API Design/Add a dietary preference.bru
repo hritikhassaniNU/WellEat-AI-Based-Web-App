@@ -1,0 +1,27 @@
+meta {
+  name: Add a dietary preference
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/api/users/:userId/dietary-preferences
+  body: json
+  auth: none
+}
+
+params:path {
+  userId: 67414714e549f1bdbfeaac39
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+      "foodPreferences": [
+        "Updated Food Preferences"
+      ]
+  }
+}

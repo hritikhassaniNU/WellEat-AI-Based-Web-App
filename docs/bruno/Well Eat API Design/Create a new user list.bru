@@ -1,0 +1,31 @@
+meta {
+  name: Create a new user list
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{baseUrl}}/api/users/:userId/user-lists
+  body: json
+  auth: none
+}
+
+params:path {
+  userId: 67414714e549f1bdbfeaac39
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+      "groceryItems": [
+        {
+          "ingredients": ["A","B","C"],
+          "pros": ["A is great", "B is great"],
+          "cons": ["C is bad"]
+        }
+      ]
+    }
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Delete a recommendation
+  type: http
+  seq: 21
+}
+
+delete {
+  url: {{baseUrl}}/api/recommendations/:userId/recommendations/:recommendationId
+  body: none
+  auth: none
+}
+
+params:path {
+  userId: 
+  recommendationId: 
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Create a new recipe
+  type: http
+  seq: 26
+}
+
+post {
+  url: {{baseUrl}}/api/recipes
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "First Recipe",
+    "instructions": "Put the first hello, no how to make",
+    "difficultyLevel": "Medium"
+  }
+}

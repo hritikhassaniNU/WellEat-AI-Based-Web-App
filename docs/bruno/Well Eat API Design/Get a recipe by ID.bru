@@ -1,0 +1,19 @@
+meta {
+  name: Get a recipe by ID
+  type: http
+  seq: 27
+}
+
+get {
+  url: {{baseUrl}}/api/recipes/:recipeId
+  body: none
+  auth: none
+}
+
+params:path {
+  recipeId: 
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

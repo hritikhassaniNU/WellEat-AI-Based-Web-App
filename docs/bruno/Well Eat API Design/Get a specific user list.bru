@@ -1,0 +1,20 @@
+meta {
+  name: Get a specific user list
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{baseUrl}}/api/users/:userId/user-lists/:listId
+  body: none
+  auth: none
+}
+
+params:path {
+  userId: 67414714e549f1bdbfeaac39
+  listId: 67414bbf5fa64b3e2d8cb2f5
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

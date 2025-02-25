@@ -1,0 +1,19 @@
+meta {
+  name: Get user-s dietary preferences
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/api/users/:userId/dietary-preferences
+  body: none
+  auth: none
+}
+
+params:path {
+  userId: 67414714e549f1bdbfeaac39
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

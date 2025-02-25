@@ -1,0 +1,307 @@
+{
+  "preloader": {
+    "loading": "Loading...",
+    "loadingMessage": "Please wait while we load the content",
+    "authenticatedLoadingMessage": "Please wait while we load your personalized content"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "getStarted": "Get Started",
+    "contactInfo": "Contact Info",
+    "ourTeam": "Our Team",
+    "ourStory": "Our Story",
+    "faq": "FAQ"
+  },
+  "navbar": {
+    "profile": "Profile",
+    "home": "Home",
+    "myList": "My List",
+    "about": "About",
+    "ourTeam": "Our Team",
+    "ourStory": "Our Story",
+    "logout": "Logout",
+    "faq": "FAQ"
+  },
+  "signupScreen": {
+    "createAccount": "Create Account",
+    "login": "Log In",
+    "enterDetails": "Enter your details to get started",
+    "email": "Email",
+    "enterEmail": "Enter your email",
+    "password": "Enter your password",
+    "confirmPassword": "Re-enter your password",
+    "allFieldsRequired": "All fields are required",
+    "charLengthValidation": "Password must be at least 6 characters long",
+    "charLengthValidationMax": "Password must not exceed 20 characters",
+    "passErr": "Password must include at least one uppercase letter, one lowercase letter, one number, and one special character",
+    "passIncorrect": "Passwords do not match",
+    "emailValid": "Please enter a valid email address",
+    "easyPass": "Password is too common and easy to guess",
+    "emailDomain": "Email domain is not allowed",
+    "tnc": "By registering, you agree to our",
+    "tos": "Terms of Service",
+    "privPol": " Privacy Policy",
+    "and": "and",
+    "registering": "By registering, you agree to our"
+  },
+  "loginScreen": {
+    "signup": "SIGN UP",
+    "loginhere": "LOG IN",
+    "nicetoSee": "Nice to see you again!",
+    "enterEP": "Enter your email and password",
+    "email": "Email",
+    "enterEmail": "Enter your email",
+    "password": "Enter your password",
+    "remember": "Remember me",
+    "forgot": "FORGOT PASSWORD?"
+  },
+  "homeScreen": {
+    "welcome": "Weclome",
+    "hotRecommendations": "HOT RECOMMENDATIONS",
+    "myRecipes": "MY RECIPES",
+    "myGrocery": "MY GROCERY"
+  },
+  "profileScreen": {
+    "myProfile": "My Profile",
+    "personalInformation": "Personal Information",
+    "myList": "My List",
+    "myRecipes": "My Recipes",
+    "delete": "Delete Account ",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "invalidEmail": "Invalid email address",
+    "phone": "Phone",
+    "dob": "Date of Birth (YYYY-MM-DD)",
+    "format": "Format: YYYY-MM-DD",
+    "height": "Height",
+    "heightReq": "Height is required",
+    "country": "Country",
+    "state": "State/Province",
+    "city": "City",
+    "dietaryPref": "Dietary Preferences",
+    "allergies": "Allergies",
+    "fitGoal": "Fitness Goals",
+    "updProf": "UPDATE PROFILE",
+    "pescaterian": "Pescaterian",
+    "vegan": "Vegan",
+    "veggie": "Vegetarian",
+    "egg": "Eggetarian",
+    "flexi": "Flexitarian",
+    "macrob": "Macrobiotic",
+    "peanuts": "Peanuts",
+    "treeNuts": "Tree Nuts",
+    "dairy": "Dairy",
+    "shellfish": "Shellfish",
+    "glut": "Gluten",
+    "soy": "Soy",
+    "weightLoss": "Weight Loss",
+    "muscleGain": "Muscle Gain",
+    "flexib": "Flexibility",
+    "bal": "Balance",
+
+    "overWell": "Overall Wellness",
+    "endurance": "Endurance"
+  },
+
+  "hero": {
+    "subtitle": "AI-POWERED NUTRITION GUIDE",
+    "title": "Make Healthy Choices Simple",
+    "description": "Get personalized nutrition recommendations powered by AI. Scan food labels, track your diet, and make informed decisions about your health journey.",
+    "getStarted": "Get Started"
+  },
+  "scan": {
+      "healthScore": "Health Score: {{score}}/100",
+      "warnings": {
+        "additives": "{{count}} additives",
+        "salt": "Too salty",
+        "calories": "High calories"
+      },
+      "title": {
+        "main": "Evaluate the quality of your",
+        "highlight": "foods"
+      },
+      "description": "Take control of your nutrition with our AI-powered food scanner. We analyze ingredients instantly, providing clear insights about additives, nutritional value, and health impact. Make informed choices for a healthier lifestyle with every scan.",
+      "altText": "Lays Packet Product image"
+    },
+  "about": {
+      "subtitle": "About Us",
+      "title": "Empowering Your Health Journey",
+      "description": "Our mission is to revolutionize how you understand and choose your food. Through advanced AI analysis and personalized recommendations, we help you make informed decisions about your nutrition and overall well-being.",
+      "learnMore": "Learn More"
+    },
+
+    "product": {
+      "title": "Featured Healthy Meals",
+      "nutritionInfo": "Nutrition Information",
+      "healthScore": "Health Score: {{score}}%",
+      "nutritionLabels": {
+        "calories": "Calories",
+        "protein": "Protein",
+        "carbs": "Carbs",
+        "fats": "Fats",
+        "fiber": "Fiber"
+      },
+      "meals": {
+        "superBowl": {
+          "title": "Super Food Bowl",
+          "description": "A nutrient-rich bowl packed with fresh vegetables, quinoa, avocado, and a variety of superfoods. Perfect for maintaining a balanced and healthy diet."
+        },
+        "mediterranean": {
+          "title": "Mediterranean Delight",
+          "description": "Experience the flavors of the Mediterranean with this healthy mix of vegetables, olive oil, and whole grains. Rich in antioxidants and heart-healthy fats."
+        },
+        "proteinBowl": {
+          "title": "Protein Power Bowl",
+          "description": "A perfect post-workout meal loaded with lean proteins, complex carbohydrates, and essential nutrients for muscle recovery and growth."
+        }
+      }
+    },
+
+    "info": {
+      "title": {
+        "main": "Make Informed",
+        "sub": "Food Choices"
+      },
+      "features": {
+        "aiAnalysis": {
+          "title": "AI Food Analysis",
+          "description": "Get instant AI-powered analysis of food products with detailed nutritional information."
+        },
+        "smartRecommendations": {
+          "title": "Smart Recommendations",
+          "description": "Receive personalized healthy alternatives based on your dietary preferences."
+        },
+        "ingredientAnalysis": {
+          "title": "Ingredient Analysis",
+          "description": "Understand the impact of ingredients on your health with clear explanations."
+        },
+        "healthTracking": {
+          "title": "Health Tracking",
+          "description": "Monitor your food choices and track progress towards your health goals."
+        }
+      },
+      "altText": "App Interface"
+    },
+
+  "onboardingScreen": {
+    "welcome": {
+      "title": "Welcome to WellEat",
+      "subtitle": "Your journey to healthier eating starts here",
+      "joinCommunity": "Join our community of health-conscious food lovers",
+      "getStarted": "Let's Get Started"
+    },
+    "features": {
+      "smartAnalysis": {
+        "title": "Smart Analysis",
+        "description": "AI-powered ingredient scanning and analysis"
+      },
+      "personalizedDiet": {
+        "title": "Personalized Diet",
+        "description": "Customized recommendations based on your preferences"
+      },
+      "healthTracking": {
+        "title": "Health Tracking",
+        "description": "Monitor your nutrition goals and progress"
+      }
+    },
+    "steps": {
+      "welcome": "Welcome",
+      "personalInfo": "Personal Info",
+      "location": "Location",
+      "diet": "Diet",
+      "allergies": "Allergies",
+      "fitness": "Fitness"
+    },
+    "personalInfo": {
+      "title": {
+        "main": "Personal",
+        "highlight": "Information"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone Number",
+      "enterPhone": "Enter your phone number",
+      "dateOfBirth": "Date of Birth",
+      "selectDate": "Select date",
+      "height": "Height",
+      "enterHeight": "Enter your height"
+    },
+    "location": {
+      "title": {
+        "main": "Your",
+        "highlight": "Location"
+      },
+      "country": "Country",
+      "enterCountry": "Enter your country",
+      "state": "State/Province",
+      "enterState": "Enter your state/province",
+      "city": "City",
+      "enterCity": "Enter your city",
+      "zipCode": "Zip Code",
+      "enterZipCode": "Enter your zip code"
+    },
+    "dietary": {
+      "title": "Dietary Preferences",
+      "selectPreferences": "Select your dietary preferences",
+      "options": {
+        "vegan": "Vegan",
+        "vegetarian": "Vegetarian",
+        "eggetarian": "Eggetarian",
+        "pescaterian": "Pescaterian",
+        "flexitarian": "Flexitarian",
+        "macrobiotic": "Macrobiotic"
+      }
+    },
+    "allergies": {
+      "title": "Any Allergies?",
+      "question": "Do you have any food allergies?",
+      "options": {
+        "peanuts": "Peanuts",
+        "treeNuts": "Tree Nuts",
+        "eggs": "Eggs",
+        "dairy": "Dairy",
+        "shellfish": "Shellfish",
+        "gluten": "Gluten",
+        "soy": "Soy"
+      }
+    },
+    "fitness": {
+      "title": "Your Fitness Goals",
+      "selectGoal": "Select your fitness goal",
+      "options": {
+        "weightLoss": "Weight Loss",
+        "muscleGain": "Muscle Gain",
+        "endurance": "Endurance",
+        "flexibility": "Flexibility",
+        "balance": "Balance",
+        "wellness": "Overall Wellness"
+      }
+    },
+    "validation": {
+      "required": "This field is required",
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "phoneRequired": "Phone number is required",
+      "phoneInvalid": "Please enter a valid phone number",
+      "dateRequired": "Date of birth is required",
+      "heightRequired": "Height is required",
+      "countryRequired": "Country is required",
+      "stateRequired": "State/Province is required",
+      "cityRequired": "City is required",
+      "zipRequired": "Zip code is required",
+      "zipInvalid": "Please enter a valid zip code",
+      "selectAtLeastOne": "Please select at least one option"
+    },
+    "navigation": {
+      "back": "Back",
+      "next": "Next",
+      "complete": "Complete Setup",
+      "skip": "Skip"
+    },
+    "completion": {
+      "success": "Setup Complete!",
+      "redirect": "Redirecting you to the home page..."
+    }
+  }
+}

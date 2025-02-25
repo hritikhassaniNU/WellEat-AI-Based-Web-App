@@ -1,0 +1,224 @@
+openapi: 3.0.3
+info:
+  title: Well Eat API - Recommendations and Recipes
+  version: 1.0.0
+servers:
+  - url: https://api.welleat.com/v1
+paths:
+  /recipes:
+    post:
+      summary: Create a new recipe
+      requestBody:
+        description: Recipe object to create
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recipe'
+      responses:
+        '201':
+          description: Recipe created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+        '400':
+          description: Invalid recipe data provided
+        '500':
+          description: Internal server error
+
+  /recipes/{recipeId}:
+    parameters:
+      - name: recipeId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a recipe by ID
+      responses:
+        '200':
+          description: Recipe details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+        '404':
+          description: Recipe not found
+        '500':
+          description: Internal server error
+    put:
+      summary: Update a recipe by ID
+      requestBody:
+        description: Recipe object to update
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recipe'
+      responses:
+        '200':
+          description: Recipe updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+        '400':
+          description: Invalid recipe data provided
+        '404':
+          description: Recipe not found
+        '500':
+          description: Internal server error
+    delete:
+      summary: Delete a recipe
+      responses:
+        '204':
+          description: Recipe deleted successfully
+        '404':
+          description: Recipe not found
+        '500':
+          description: Internal server error
+
+  /users/{userId}/recommendations:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get user's recommendations
+      responses:
+        '200':
+          description: List of recommendations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Recommendation'
+        '404':
+          description: User not found
+        '500':
+          description: Internal server error
+    post:
+      summary: Create a new recommendation
+      requestBody:
+        description: Recommendation object to create
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recommendation'
+      responses:
+        '201':
+          description: Recommendation created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recommendation'
+        '400':
+          description: Invalid recommendation data provided
+        '500':
+          description: Internal server error
+
+  /users/{userId}/recommendations/{recommendationId}:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: recommendationId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a recommendation by ID
+      responses:
+        '200':
+          description: Recommendation details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recommendation'
+        '404':
+          description: Recommendation not found
+        '500':
+          description: Internal server error
+    delete:
+      summary: Delete a recommendation
+      responses:
+        '204':
+          description: Recommendation deleted successfully
+        '404':
+          description: Recommendation not found
+        '500':
+          description: Internal server error
+
+components:
+  schemas:
+    Recommendation:
+      type: object
+      properties:
+        RecommendationID:
+          type: string
+          example: "rec123"
+        Type:
+          type: string
+          example: "Recipe"
+        Recipe:
+          $ref: '#/components/schemas/Recipe'
+        GroceryItem:
+          $ref: '#/components/schemas/GroceryItem'
+
+    Recipe:
+      type: object
+      properties:
+        RecipeID:
+          type: string
+          example: "recipe123"
+        Name:
+          type: string
+          example: "Classic Spaghetti Bolognese"
+        Instructions:
+          type: string
+          example: "1. Cook spaghetti according to package instructions. 2. In a separate pan, cook minced meat until browned. 3. Add tomato sauce and simmer for 15 minutes. 4. Serve sauce over spaghetti."
+        DifficultyLevel:
+          type: string
+          example: "Easy"
+
+    GroceryItem:
+      type: object
+      properties:
+        ItemID:
+          type: string
+          example: "item456"
+        Name:
+          type: string
+          example: "Organic Tomato Sauce"
+        Brand:
+          type: string
+          example: "Nature's Best"
+        Category:
+          type: string
+          example: "Condiments"
+        NutritionalScore:
+          type: number
+          example: 85
+        Ingredients:
+          type: array
+          items:
+            type: string
+          example: ["Tomato", "Salt", "Olive Oil", "Basil"]
+        Pros:
+          type: array
+          items:
+            type: string
+          example: ["Low in sugar", "Organic ingredients"]
+        Cons:
+          type: array
+          items:
+            type: string
+          example: ["High in sodium", "Expensive"]
