@@ -127,7 +127,7 @@ const Footer = () => {
                 {t('footer.quickLinks')}
               </Typography>
               {[
-                { text: t('footer.ourTeam'), path: '/ourteam' },
+                { text: t('footer.ourTeam'), path: '/' },
                 { text: t('footer.ourStory'), path: '/ourstory' },
                 { text: t('footer.faq'), path: '/faqs' },
               ].map(({ text, path }) => (
