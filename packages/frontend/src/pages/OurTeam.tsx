@@ -75,7 +75,7 @@ const teamMembers = [
     id: 1,
     name: 'Prayas Lashkari',
     role: 'M.S. in Software Engineering',
-    image: 'public/assets/images/prayas.jpeg',
+    image: '/assets/images/prayas.jpeg',
     description:
       'Designer, Developer with a passion for creating beautiful and functional user experiences.',
     linkedin: 'https://www.linkedin.com/in/prayaslashkari/',
@@ -86,7 +86,7 @@ const teamMembers = [
     id: 2,
     name: 'Hritik Hassani',
     role: 'M.S. in Information Systems',
-    image: 'public/assets/images/hritik.png',
+    image: '/src/assets/images/hritik.png',
     description:
       'Developer and Entrepreneur with a focus on building products that solve real-world problems.',
     linkedin: 'www.linkedin.com/in/hritik-hassani',
@@ -97,7 +97,7 @@ const teamMembers = [
     id: 3,
     name: 'Amritesh Anand',
     role: 'M.S. in Software Engineering',
-    image: 'public/assets/images/amritesh.jpeg',
+    image: '/src/assets/images/amritesh.jpeg',
     description:
       'Experienced Fullstack developer with a passion for building scalable and performant web applications.',
     linkedin: 'https://www.linkedin.com/in/amritessh/',
@@ -108,7 +108,7 @@ const teamMembers = [
     id: 4,
     name: 'Shubham Bhadra',
     role: 'M.S. in Software Engineering',
-    image: 'public/assets/images/shubham.jpeg',
+    image: '/src/assets/images/shubham.jpeg',
     description:
       'Experience Backend Developer and Data Engineer with a focus on building scalable and reliable backend systems.',
     linkedin: 'https://www.linkedin.com/in/shubham-bhadra/',
