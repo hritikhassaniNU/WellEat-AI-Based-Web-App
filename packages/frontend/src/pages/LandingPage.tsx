@@ -16,6 +16,7 @@ import ScanLabel from '../components/ScanLabel/ScanLabel';
 import Footer from '../components/Footer/Footer';
 import ScrollBar from '../components/ScrollBar/ScrollBar';
 import { useNavigate } from 'react-router-dom';
+import DishImage from '../../assets/images/dietplate.png';
 import { useTranslation } from 'react-i18next';
 
 const HeroContainer = styled(Box)({
@@ -198,7 +199,8 @@ const LandingPage = () => {
             >
               <Box
                 component='img'
-                src='public/assets/images/dietplate.png'
+                src={DishImage}
+                // src='public/assets/images/dietplate.png'
                 alt='Healthy Food Plate'
                 sx={{
                   width: isMobile ? '300px' : isTablet ? '400px' : '450px',
