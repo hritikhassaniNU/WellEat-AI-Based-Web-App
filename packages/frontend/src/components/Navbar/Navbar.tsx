@@ -154,11 +154,11 @@ const Navbar = () => {
       isAuthenticatedRoute: true,
     },
     { label: t('navbar.about'), path: '/about', isAuthenticatedRoute: false },
-    {
-      label: t('navbar.ourTeam'),
-      path: '/ourteam',
-      isAuthenticatedRoute: false,
-    },
+    // {
+    //   label: t('navbar.ourTeam'),
+    //   path: '/ourteam',
+    //   isAuthenticatedRoute: false,
+    // },
     {
       label: t('navbar.ourStory'),
       path: '/ourstory',
