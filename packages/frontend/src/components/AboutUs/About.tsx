@@ -280,7 +280,7 @@ const About = () => {
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
                       <StyledImage
-                        src='/src/assets/images/about.png'
+                        src='public/assets/images/about.png'
                         alt={t('about.subtitle')}
                         loading='lazy'
                       />

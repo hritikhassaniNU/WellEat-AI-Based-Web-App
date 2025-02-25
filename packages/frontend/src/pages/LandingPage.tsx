@@ -198,7 +198,7 @@ const LandingPage = () => {
             >
               <Box
                 component='img'
-                src='/src/assets/images/dietplate.png'
+                src='public/assets/images/dietplate.png'
                 alt='Healthy Food Plate'
                 sx={{
                   width: isMobile ? '300px' : isTablet ? '400px' : '450px',
