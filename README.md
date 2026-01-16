@@ -16,13 +16,6 @@ This is a comprehensive platform designed to help users make informed decisions 
 
 This app aims to promote healthier lifestyle choices by providing personalized, data-driven recommendations and easy-to-use tools to choose the right grocery items for your health.
 
-## Team Member Details
-
-- Prayas Lashkari (lashkari.p@northeastern.edu)
-- Amritesh Anand (anand.amri@northeastern.edu)
-- Shubham Bhadra (bhadra.sh@northeastern.edu)
-- Hritik Hassani (hassani.h@northeastern.edu)
-
 ## Prerequisites
 
 Before running this project, ensure you have the following installed:
