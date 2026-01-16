@@ -75,8 +75,7 @@ We are using Monorepo structure utilizing yarn workspaces
 <img src="https://github.com/info-6150-fall-2024/final-project-honoredones/blob/5dd09681aaccf6332fb92a60ff43a10eaf1d741c/assets/WellEat-Home.png" alt="WellEat-Home" width="500">
 <img src="https://github.com/info-6150-fall-2024/final-project-honoredones/blob/5dd09681aaccf6332fb92a60ff43a10eaf1d741c/assets/WellEat-Landing.png" alt="WellEat-LandingPage" width="500">
 <img src="https://github.com/info-6150-fall-2024/final-project-honoredones/blob/5dd09681aaccf6332fb92a60ff43a10eaf1d741c/assets/WellEat-Landing2.png" alt="WellEat-LandingPage2" width="500">
-<img src="https://github.com/info-6150-fall-2024/final-project-honoredones/blob/5dd09681aaccf6332fb92a60ff43a10eaf1d741c/assets/WellEat-OurStory.png" alt="WellEat-OurStory" width="500">
-<img src="https://github.com/info-6150-fall-2024/final-project-honoredones/blob/5dd09681aaccf6332fb92a60ff43a10eaf1d741c/assets/WellEat-OurTeam.png" alt="WellEat-OurTeam" width="500">
+
 <img src="https://github.com/info-6150-fall-2024/final-project-honoredones/blob/5dd09681aaccf6332fb92a60ff43a10eaf1d741c/assets/WellEat-Profile.png" alt="WellEat-Profile" width="500">
 <img src="https://github.com/info-6150-fall-2024/final-project-honoredones/blob/5cfca14ec0781e70f334f3680ad23dad25c7988d/PresentationPPT/WellEat-Signin.png" alt="WellEat-Login" width="500">
 <img src="https://github.com/info-6150-fall-2024/final-project-honoredones/blob/5cfca14ec0781e70f334f3680ad23dad25c7988d/PresentationPPT/WellEat-Signup.png" alt="WellEat-Signup" width="500">
