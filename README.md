@@ -1,5 +1,3 @@
-Final Project Presentation Video Link - https://northeastern-my.sharepoint.com/:v:/r/personal/hassani_h_northeastern_edu/Documents/Team%20HonoredOnes_%20Final_Project_Presentation.mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=Or9hyG
-
 ## Project Topic
 
 WellEat is a Health focused Recommendation and Classification App.
